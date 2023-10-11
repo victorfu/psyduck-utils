@@ -50,19 +50,21 @@ describe("unit | getCurrentYearMonth", () => {
 });
 
 describe("unit | getRandomTime", () => {
-  const date = new Date("2022-01-01T00:00:00.000Z");
+  // const date = new Date("2022-01-01T00:00:00.000Z");
 
   it("returns a Date object", () => {
-    const result = getRandomTime(date, "00:00", "23:59");
+    const date = new Date();
+    const result = getRandomTime(date, "08:50", "18:20");
     expect(result instanceof Date).toBe(true);
   });
 
   it("returns a random time between start and end times", () => {
-    const result = getRandomTime(date, "00:00", "23:59");
+    const date = new Date();
+    const result = getRandomTime(date, "08:50", "18:20");
     const start = new Date(date);
-    start.setUTCHours(0, 0, 0, 0);
+    start.setHours(8, 50, 0, 0);
     const end = new Date(date);
-    end.setUTCHours(23, 59, 59, 999);
+    end.setHours(18, 20, 0, 0);
     expect(result.getTime()).toBeGreaterThanOrEqual(start.getTime());
     expect(result.getTime()).toBeLessThanOrEqual(end.getTime());
   });

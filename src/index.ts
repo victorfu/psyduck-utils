@@ -139,15 +139,9 @@ export const getCurrentYearMonth = (): {
  * @param date
  * @param start
  * @param end
- * @param timeZoneOffset
  * @returns {Date}
  */
-export const getRandomTime = (
-  date: Date,
-  start: string,
-  end: string,
-  timeZoneOffset: number = 480, // Default to UTC+8
-): Date => {
+export const getRandomTime = (date: Date, start: string, end: string): Date => {
   // Validate input date
   if (
     Object.prototype.toString.call(date) !== "[object Date]" ||
@@ -207,9 +201,5 @@ export const getRandomTime = (
     remainderMinute,
   );
 
-  // Adjust for time zone
-  const timezoneAdjustedDate = new Date(
-    randomDate.getTime() + timeZoneOffset * 60 * 1000,
-  );
-  return timezoneAdjustedDate;
+  return randomDate;
 };
