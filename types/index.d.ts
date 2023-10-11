@@ -68,8 +68,7 @@ export declare const getCurrentYearMonth: () => {
  * @param date
  * @param start
  * @param end
- * @param timeZoneOffset
  * @returns {Date}
  */
-export declare const getRandomTime: (date: Date, start: string, end: string, timeZoneOffset?: number) => Date;
+export declare const getRandomTime: (date: Date, start: string, end: string) => Date;
 //# sourceMappingURL=index.d.ts.map

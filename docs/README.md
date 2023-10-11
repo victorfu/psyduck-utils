@@ -32,7 +32,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L4)
+[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L4)
 
 ## Variables
 
@@ -46,7 +46,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L27)
+[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L27)
 
 ## Functions
 
@@ -69,7 +69,7 @@ Calculate the duration between two time strings.
 
 #### Defined in
 
-[index.ts:71](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L71)
+[index.ts:71](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L71)
 
 ___
 
@@ -91,7 +91,7 @@ Convert Date objects to strings in yyyy-MM-dd format
 
 #### Defined in
 
-[index.ts:92](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L92)
+[index.ts:92](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L92)
 
 ___
 
@@ -113,7 +113,7 @@ Convert Date objects to strings in HH:mm format
 
 #### Defined in
 
-[index.ts:114](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L114)
+[index.ts:114](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L114)
 
 ___
 
@@ -135,7 +135,7 @@ Convert Date objects to strings in yyyy-MM-dd format
 
 #### Defined in
 
-[index.ts:104](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L104)
+[index.ts:104](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L104)
 
 ___
 
@@ -156,24 +156,23 @@ Get current year and month
 
 #### Defined in
 
-[index.ts:126](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L126)
+[index.ts:126](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L126)
 
 ___
 
 ### getRandomTime
 
-▸ **getRandomTime**(`date`, `start`, `end`, `timeZoneOffset?`): `Date`
+▸ **getRandomTime**(`date`, `start`, `end`): `Date`
 
 Get the random time between start and end time
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `date` | `Date` | `undefined` |
-| `start` | `string` | `undefined` |
-| `end` | `string` | `undefined` |
-| `timeZoneOffset` | `number` | `480` |
+| Name | Type |
+| :------ | :------ |
+| `date` | `Date` |
+| `start` | `string` |
+| `end` | `string` |
 
 #### Returns
 
@@ -181,7 +180,7 @@ Get the random time between start and end time
 
 #### Defined in
 
-[index.ts:145](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L145)
+[index.ts:144](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L144)
 
 ___
 
@@ -217,4 +216,4 @@ return Number(value);
 
 #### Defined in
 
-[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/4c3cbae/src/index.ts#L24)
+[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/258d8bd/src/index.ts#L24)

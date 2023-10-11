@@ -1,5 +1,5 @@
 /*!
- * psyduck-utils v0.0.3
+ * psyduck-utils v0.0.4
  * (c) Victor Fu
  * Released under the MIT License.
  */
@@ -129,11 +129,9 @@
    * @param date
    * @param start
    * @param end
-   * @param timeZoneOffset
    * @returns {Date}
    */
-  var getRandomTime = function (date, start, end, timeZoneOffset) {
-      if (timeZoneOffset === void 0) { timeZoneOffset = 480; }
+  var getRandomTime = function (date, start, end) {
       // Validate input date
       if (Object.prototype.toString.call(date) !== "[object Date]" ||
           isNaN(date.getTime())) {
@@ -172,9 +170,7 @@
       var remainderMinute = randomMinute % 60;
       // Create new Date object with random time
       var randomDate = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), randomHour, remainderMinute);
-      // Adjust for time zone
-      var timezoneAdjustedDate = new Date(randomDate.getTime() + timeZoneOffset * 60 * 1000);
-      return timezoneAdjustedDate;
+      return randomDate;
   };
 
   exports.calculateDuration = calculateDuration;
