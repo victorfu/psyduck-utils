@@ -2,9 +2,6 @@
 
 [![Continuous Integrations](https://github.com/victorfu/psyduck-utils/actions/workflows/continuous-integrations.yaml/badge.svg?branch=main)](https://github.com/victorfu/psyduck-utils/actions/workflows/continuous-integrations.yaml)
 [![License](https://badgen.net/github/license/victorfu/psyduck-utils)](./LICENSE)
-[![Package tree-shaking](https://badgen.net/bundlephobia/tree-shaking/psyduck-utils)](https://bundlephobia.com/package/psyduck-utils)
-[![Package minified & gzipped size](https://badgen.net/bundlephobia/minzip/psyduck-utils)](https://bundlephobia.com/package/psyduck-utils)
-[![Package dependency count](https://badgen.net/bundlephobia/dependency-count/reactpsyduck-utils)](https://bundlephobia.com/package/psyduck-utils)
 
 ## Installation
 
