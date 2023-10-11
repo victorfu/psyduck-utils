@@ -1,5 +1,5 @@
 /*!
- * psyduck-utils v0.0.1
+ * psyduck-utils v0.0.2
  * (c) Victor Fu
  * Released under the MIT License.
  */
@@ -59,6 +59,55 @@ var holidays = {
     "2024-10-10": "國慶日",
     "2024-10-11": "國慶日",
 };
+/**
+ * Calculate the duration between two time strings.
+ *
+ * @param startTime
+ * @param endTime
+ * @returns {number}
+ */
+var calculateDuration = function (startTime, endTime) {
+    var _a = startTime.split(":").map(Number), startHour = _a[0], startMinute = _a[1];
+    var _b = endTime.split(":").map(Number), endHour = _b[0], endMinute = _b[1];
+    var startDate = new Date(2000, 0, 1, startHour, startMinute); // Date here is irrelevant
+    var endDate = new Date(2000, 0, 1, endHour, endMinute); // Date here is irrelevant
+    var differenceInMinutes = (endDate.getTime() - startDate.getTime()) / (1000 * 60);
+    return differenceInMinutes;
+};
+/**
+ * Convert Date objects to strings in yyyy-MM-dd format
+ *
+ * @param date
+ * @returns {string}
+ */
+var formatDate = function (date) {
+    return "".concat(date.getFullYear(), "-").concat((date.getMonth() + 1)
+        .toString()
+        .padStart(2, "0"), "-").concat(date.getDate().toString().padStart(2, "0"));
+};
+/**
+ * Convert Date objects to strings in HH:mm format
+ *
+ * @param date
+ * @returns {string}
+ */
+var formatDate2HHmm = function (date) {
+    return "".concat(date.getHours().toString().padStart(2, "0"), ":").concat(date
+        .getMinutes()
+        .toString()
+        .padStart(2, "0"));
+};
+/**
+ * Get current year and month
+ *
+ * @returns { { currentYear: string; currentMonth: string } }
+ */
+var getCurrentYearMonth = function () {
+    var currentDate = new Date();
+    var currentYear = currentDate.getFullYear().toString();
+    var currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+    return { currentYear: currentYear, currentMonth: currentMonth };
+};
 
-export { holidays, isNumberParseable };
+export { calculateDuration, formatDate, formatDate2HHmm, getCurrentYearMonth, holidays, isNumberParseable };
 //# sourceMappingURL=index.esm.js.map

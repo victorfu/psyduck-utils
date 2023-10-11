@@ -14,6 +14,10 @@ psyduck-utils
 
 ### Functions
 
+- [calculateDuration](README.md#calculateduration)
+- [formatDate](README.md#formatdate)
+- [formatDate2HHmm](README.md#formatdate2hhmm)
+- [getCurrentYearMonth](README.md#getcurrentyearmonth)
 - [isNumberParseable](README.md#isnumberparseable)
 
 ## Type Aliases
@@ -26,7 +30,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-index.ts:4
+[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L4)
 
 ## Variables
 
@@ -34,50 +38,103 @@ index.ts:4
 
 • `Const` **holidays**: `Object`
 
-#### Type declaration
+#### Index signature
 
-| Name | Type |
-| :------ | :------ |
-| `2023-01-01` | `string` |
-| `2023-01-02` | `string` |
-| `2023-01-20` | `string` |
-| `2023-01-21` | `string` |
-| `2023-01-22` | `string` |
-| `2023-01-23` | `string` |
-| `2023-01-24` | `string` |
-| `2023-01-25` | `string` |
-| `2023-01-26` | `string` |
-| `2023-01-27` | `string` |
-| `2023-02-27` | `string` |
-| `2023-02-28` | `string` |
-| `2023-04-03` | `string` |
-| `2023-04-04` | `string` |
-| `2023-04-05` | `string` |
-| `2023-05-01` | `string` |
-| `2023-06-22` | `string` |
-| `2023-06-23` | `string` |
-| `2023-09-29` | `string` |
-| `2023-10-09` | `string` |
-| `2023-10-10` | `string` |
-| `2024-01-01` | `string` |
-| `2024-02-09` | `string` |
-| `2024-02-10` | `string` |
-| `2024-02-11` | `string` |
-| `2024-02-12` | `string` |
-| `2024-02-28` | `string` |
-| `2024-04-04` | `string` |
-| `2024-05-01` | `string` |
-| `2024-06-10` | `string` |
-| `2024-09-16` | `string` |
-| `2024-09-17` | `string` |
-| `2024-10-10` | `string` |
-| `2024-10-11` | `string` |
+▪ [key: `string`]: `string`
 
 #### Defined in
 
-index.ts:27
+[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L27)
 
 ## Functions
+
+### calculateDuration
+
+▸ **calculateDuration**(`startTime`, `endTime`): `number`
+
+Calculate the duration between two time strings.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `startTime` | `string` |
+| `endTime` | `string` |
+
+#### Returns
+
+`number`
+
+#### Defined in
+
+[index.ts:71](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L71)
+
+___
+
+### formatDate
+
+▸ **formatDate**(`date`): `string`
+
+Convert Date objects to strings in yyyy-MM-dd format
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `date` | `Date` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[index.ts:92](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L92)
+
+___
+
+### formatDate2HHmm
+
+▸ **formatDate2HHmm**(`date`): `string`
+
+Convert Date objects to strings in HH:mm format
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `date` | `Date` |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[index.ts:104](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L104)
+
+___
+
+### getCurrentYearMonth
+
+▸ **getCurrentYearMonth**(): `Object`
+
+Get current year and month
+
+#### Returns
+
+`Object`
+
+| Name | Type |
+| :------ | :------ |
+| `currentMonth` | `string` |
+| `currentYear` | `string` |
+
+#### Defined in
+
+[index.ts:116](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L116)
+
+___
 
 ### isNumberParseable
 
@@ -111,4 +168,4 @@ return Number(value);
 
 #### Defined in
 
-index.ts:24
+[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L24)

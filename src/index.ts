@@ -24,7 +24,7 @@ export type NumberParseable = (number | string | boolean) & {
 export const isNumberParseable = (value: unknown): value is NumberParseable =>
   !Number.isNaN(Number(value));
 
-export const holidays = {
+export const holidays: { [key: string]: string } = {
   "2023-01-01": "元旦",
   "2023-01-02": "開國紀念日",
   "2023-01-20": "春節",
@@ -59,4 +59,66 @@ export const holidays = {
   "2024-09-17": "中秋節",
   "2024-10-10": "國慶日",
   "2024-10-11": "國慶日",
+};
+
+/**
+ * Calculate the duration between two time strings.
+ *
+ * @param startTime
+ * @param endTime
+ * @returns {number}
+ */
+export const calculateDuration = (
+  startTime: string,
+  endTime: string,
+): number => {
+  const [startHour, startMinute] = startTime.split(":").map(Number);
+  const [endHour, endMinute] = endTime.split(":").map(Number);
+
+  const startDate = new Date(2000, 0, 1, startHour, startMinute); // Date here is irrelevant
+  const endDate = new Date(2000, 0, 1, endHour, endMinute); // Date here is irrelevant
+
+  const differenceInMinutes =
+    (endDate.getTime() - startDate.getTime()) / (1000 * 60);
+  return differenceInMinutes;
+};
+
+/**
+ * Convert Date objects to strings in yyyy-MM-dd format
+ *
+ * @param date
+ * @returns {string}
+ */
+export const formatDate = (date: Date): string => {
+  return `${date.getFullYear()}-${(date.getMonth() + 1)
+    .toString()
+    .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+};
+
+/**
+ * Convert Date objects to strings in HH:mm format
+ *
+ * @param date
+ * @returns {string}
+ */
+export const formatDate2HHmm = (date: Date): string => {
+  return `${date.getHours().toString().padStart(2, "0")}:${date
+    .getMinutes()
+    .toString()
+    .padStart(2, "0")}`;
+};
+
+/**
+ * Get current year and month
+ *
+ * @returns { { currentYear: string; currentMonth: string } }
+ */
+export const getCurrentYearMonth = (): {
+  currentYear: string;
+  currentMonth: string;
+} => {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear().toString();
+  const currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+  return { currentYear, currentMonth };
 };
