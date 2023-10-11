@@ -30,7 +30,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L4)
+[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L4)
 
 ## Variables
 
@@ -44,7 +44,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L27)
+[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L27)
 
 ## Functions
 
@@ -67,7 +67,7 @@ Calculate the duration between two time strings.
 
 #### Defined in
 
-[index.ts:71](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L71)
+[index.ts:71](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L71)
 
 ___
 
@@ -89,7 +89,7 @@ Convert Date objects to strings in yyyy-MM-dd format
 
 #### Defined in
 
-[index.ts:92](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L92)
+[index.ts:92](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L92)
 
 ___
 
@@ -111,7 +111,7 @@ Convert Date objects to strings in HH:mm format
 
 #### Defined in
 
-[index.ts:104](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L104)
+[index.ts:104](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L104)
 
 ___
 
@@ -132,7 +132,7 @@ Get current year and month
 
 #### Defined in
 
-[index.ts:116](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L116)
+[index.ts:116](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L116)
 
 ___
 
@@ -168,4 +168,4 @@ return Number(value);
 
 #### Defined in
 
-[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/9d7a48c/src/index.ts#L24)
+[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/7494c80/src/index.ts#L24)
