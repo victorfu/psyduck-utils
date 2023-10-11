@@ -86,6 +86,15 @@ var formatDate = function (date) {
         .padStart(2, "0"), "-").concat(date.getDate().toString().padStart(2, "0"));
 };
 /**
+ * Convert Date objects to strings in yyyy-MM-dd format
+ *
+ * @param date
+ * @returns {string}
+ */
+var formatDate2yyyyMMdd = function (date) {
+    return formatDate(date);
+};
+/**
  * Convert Date objects to strings in HH:mm format
  *
  * @param date
@@ -108,6 +117,59 @@ var getCurrentYearMonth = function () {
     var currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, "0");
     return { currentYear: currentYear, currentMonth: currentMonth };
 };
+/**
+ * Get the random time between start and end time
+ *
+ * @param date
+ * @param start
+ * @param end
+ * @param timeZoneOffset
+ * @returns {Date}
+ */
+var getRandomTime = function (date, start, end, timeZoneOffset) {
+    if (timeZoneOffset === void 0) { timeZoneOffset = 480; }
+    // Validate input date
+    if (Object.prototype.toString.call(date) !== "[object Date]" ||
+        isNaN(date.getTime())) {
+        throw new Error("Invalid date object provided.");
+    }
+    // Validate and extract hours and minutes from start and end times
+    var timeRegex = /^([01]?\d|2[0-3]):([0-5]\d)$/;
+    if (!timeRegex.test(start) || !timeRegex.test(end)) {
+        throw new Error("Invalid time format. Expected HH:mm.");
+    }
+    var startParts = start.split(":").map(Number);
+    var endParts = end.split(":").map(Number);
+    if (startParts.length !== 2 || endParts.length !== 2) {
+        throw new Error("Invalid time format. Ensure to use HH:mm.");
+    }
+    var startHour = startParts[0];
+    var startMinute = startParts[1];
+    var endHour = endParts[0];
+    var endMinute = endParts[1];
+    // Validate start time is before end time
+    if (startHour === undefined ||
+        endHour === undefined ||
+        startMinute === undefined ||
+        endMinute === undefined ||
+        startHour > endHour ||
+        (startHour === endHour && startMinute >= endMinute)) {
+        throw new Error("Start time must be before end time.");
+    }
+    // Convert times to minutes
+    var startInMinutes = startHour * 60 + startMinute;
+    var endInMinutes = endHour * 60 + endMinute;
+    // Get a random minute between startInMinutes and endInMinutes
+    var randomMinute = Math.floor(Math.random() * (endInMinutes - startInMinutes + 1)) +
+        startInMinutes;
+    var randomHour = Math.floor(randomMinute / 60);
+    var remainderMinute = randomMinute % 60;
+    // Create new Date object with random time
+    var randomDate = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), randomHour, remainderMinute);
+    // Adjust for time zone
+    var timezoneAdjustedDate = new Date(randomDate.getTime() + timeZoneOffset * 60 * 1000);
+    return timezoneAdjustedDate;
+};
 
-export { calculateDuration, formatDate, formatDate2HHmm, getCurrentYearMonth, holidays, isNumberParseable };
+export { calculateDuration, formatDate, formatDate2HHmm, formatDate2yyyyMMdd, getCurrentYearMonth, getRandomTime, holidays, isNumberParseable };
 //# sourceMappingURL=index.esm.js.map

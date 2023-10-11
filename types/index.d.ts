@@ -40,6 +40,13 @@ export declare const calculateDuration: (startTime: string, endTime: string) => 
  */
 export declare const formatDate: (date: Date) => string;
 /**
+ * Convert Date objects to strings in yyyy-MM-dd format
+ *
+ * @param date
+ * @returns {string}
+ */
+export declare const formatDate2yyyyMMdd: (date: Date) => string;
+/**
  * Convert Date objects to strings in HH:mm format
  *
  * @param date
@@ -55,4 +62,14 @@ export declare const getCurrentYearMonth: () => {
     currentYear: string;
     currentMonth: string;
 };
+/**
+ * Get the random time between start and end time
+ *
+ * @param date
+ * @param start
+ * @param end
+ * @param timeZoneOffset
+ * @returns {Date}
+ */
+export declare const getRandomTime: (date: Date, start: string, end: string, timeZoneOffset?: number) => Date;
 //# sourceMappingURL=index.d.ts.map

@@ -96,6 +96,16 @@ export const formatDate = (date: Date): string => {
 };
 
 /**
+ * Convert Date objects to strings in yyyy-MM-dd format
+ *
+ * @param date
+ * @returns {string}
+ */
+export const formatDate2yyyyMMdd = (date: Date): string => {
+  return formatDate(date);
+};
+
+/**
  * Convert Date objects to strings in HH:mm format
  *
  * @param date
@@ -121,4 +131,85 @@ export const getCurrentYearMonth = (): {
   const currentYear = currentDate.getFullYear().toString();
   const currentMonth = (currentDate.getMonth() + 1).toString().padStart(2, "0");
   return { currentYear, currentMonth };
+};
+
+/**
+ * Get the random time between start and end time
+ *
+ * @param date
+ * @param start
+ * @param end
+ * @param timeZoneOffset
+ * @returns {Date}
+ */
+export const getRandomTime = (
+  date: Date,
+  start: string,
+  end: string,
+  timeZoneOffset: number = 480, // Default to UTC+8
+): Date => {
+  // Validate input date
+  if (
+    Object.prototype.toString.call(date) !== "[object Date]" ||
+    isNaN(date.getTime())
+  ) {
+    throw new Error("Invalid date object provided.");
+  }
+
+  // Validate and extract hours and minutes from start and end times
+  const timeRegex = /^([01]?\d|2[0-3]):([0-5]\d)$/;
+  if (!timeRegex.test(start) || !timeRegex.test(end)) {
+    throw new Error("Invalid time format. Expected HH:mm.");
+  }
+
+  const startParts = start.split(":").map(Number);
+  const endParts = end.split(":").map(Number);
+
+  if (startParts.length !== 2 || endParts.length !== 2) {
+    throw new Error("Invalid time format. Ensure to use HH:mm.");
+  }
+
+  const startHour = startParts[0];
+  const startMinute = startParts[1];
+  const endHour = endParts[0];
+  const endMinute = endParts[1];
+
+  // Validate start time is before end time
+  if (
+    startHour === undefined ||
+    endHour === undefined ||
+    startMinute === undefined ||
+    endMinute === undefined ||
+    startHour > endHour ||
+    (startHour === endHour && startMinute >= endMinute)
+  ) {
+    throw new Error("Start time must be before end time.");
+  }
+
+  // Convert times to minutes
+  const startInMinutes = startHour * 60 + startMinute;
+  const endInMinutes = endHour * 60 + endMinute;
+
+  // Get a random minute between startInMinutes and endInMinutes
+  const randomMinute =
+    Math.floor(Math.random() * (endInMinutes - startInMinutes + 1)) +
+    startInMinutes;
+
+  const randomHour = Math.floor(randomMinute / 60);
+  const remainderMinute = randomMinute % 60;
+
+  // Create new Date object with random time
+  const randomDate = new Date(
+    date.getUTCFullYear(),
+    date.getUTCMonth(),
+    date.getUTCDate(),
+    randomHour,
+    remainderMinute,
+  );
+
+  // Adjust for time zone
+  const timezoneAdjustedDate = new Date(
+    randomDate.getTime() + timeZoneOffset * 60 * 1000,
+  );
+  return timezoneAdjustedDate;
 };
