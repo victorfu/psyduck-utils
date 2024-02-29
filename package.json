@@ -1,6 +1,6 @@
 {
   "name": "psyduck-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "The utils for psyduck",
   "cdn": "dist/index.umd.js",
   "main": "dist/index.js",
