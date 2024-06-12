@@ -1,5 +1,5 @@
 /*!
- * psyduck-utils v0.0.7
+ * psyduck-utils v0.0.8
  * (c) Victor Fu
  * Released under the MIT License.
  */
