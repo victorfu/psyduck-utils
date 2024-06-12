@@ -32,7 +32,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L4)
+[index.ts:4](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L4)
 
 ## Variables
 
@@ -46,7 +46,7 @@ A Branded Type for values parseable to number.
 
 #### Defined in
 
-[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L27)
+[index.ts:27](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L27)
 
 ## Functions
 
@@ -69,7 +69,7 @@ Calculate the duration between two time strings.
 
 #### Defined in
 
-[index.ts:76](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L76)
+[index.ts:76](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L76)
 
 ___
 
@@ -91,7 +91,7 @@ Convert Date objects to strings in yyyy-MM-dd format
 
 #### Defined in
 
-[index.ts:97](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L97)
+[index.ts:97](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L97)
 
 ___
 
@@ -113,7 +113,7 @@ Convert Date objects to strings in HH:mm format
 
 #### Defined in
 
-[index.ts:119](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L119)
+[index.ts:119](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L119)
 
 ___
 
@@ -135,7 +135,7 @@ Convert Date objects to strings in yyyy-MM-dd format
 
 #### Defined in
 
-[index.ts:109](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L109)
+[index.ts:109](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L109)
 
 ___
 
@@ -156,7 +156,7 @@ Get current year and month
 
 #### Defined in
 
-[index.ts:131](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L131)
+[index.ts:131](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L131)
 
 ___
 
@@ -180,7 +180,7 @@ Get the random time between start and end time
 
 #### Defined in
 
-[index.ts:149](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L149)
+[index.ts:149](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L149)
 
 ___
 
@@ -216,4 +216,4 @@ return Number(value);
 
 #### Defined in
 
-[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/ad22f57/src/index.ts#L24)
+[index.ts:24](https://github.com/victorfu/psyduck-utils/blob/70c57d8/src/index.ts#L24)
